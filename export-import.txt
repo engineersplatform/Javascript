@@ -1,0 +1,37 @@
+<!-- ES6: Use export to Share a Code Block -->
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export { uppercaseString,lowercaseString  };
+
+<!-- Export Default -->
+
+export default function subtract(x,y) { 
+  return x-y;
+}
+
+<!-- importing export default -->
+
+import subtract from "./math_functions.js";
+
+subtract(7,4);
+
+<!-- Import -->
+
+import { uppercaseString , lowercaseString  } from'./string_functions.js';
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+<!-- Import Everything from a File -->
+
+import * as stringFunctions from "./string_functions.js";
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
